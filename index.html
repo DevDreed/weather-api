@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Weather API</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title">
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/main.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            Weather API
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container col-xs-4 col-xs-offset-4" id="login-container">
+          <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+          <input type="text" id="inputUsername" class="form-control" placeholder="Username" required>
+          <button class="btn btn-lg btn-success col-xs-6" id="loginButton">Login</button>
+          <button class="btn btn-lg btn-primary col-xs-6" id="registerButton">Register</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container col-xs-4 col-xs-offset-4 hide" id="weather-container">
+          <div class="row">
+            <input type="number" id="zipcode" name="zipcode" placeholder="Enter your desired zipcode...">
+            <button id="fetch-weather-btn" type="button" name="button" class="btn btn-primary">Fetch Weather</button>
+          </div>
+          <div class="row">
+            <div id="current-weather"></div>
+          </div>
+          <div class="row">
+            <div id="forecast-container"></div>
+          </div>
+          <div class="row">
+            <a href="" id="one-day-forcast"><span>1 Day Forecast</span></a>
+            <a href="" id="three-day-forcast"><span>3 Day Forecast</span></a>
+            <a href="" id="seven-day-forcast"><span>7 Day Forecast</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="/js/firebase.js" charset="utf-8"></script>
+    <script src="/js/firebaseMethods.js" charset="utf-8"></script>
+    <script src="/js/firebaseAuth.js" charset="utf-8"></script>
+    <script src="/js/firebaseUser.js" charset="utf-8"></script>
+    <script src="/js/main.js" charset="utf-8"></script>
+  </body>
+
+</html>
